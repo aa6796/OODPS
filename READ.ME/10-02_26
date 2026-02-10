@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare and initialize an array
+    int arr[5] = {10, 20, 30, 40, 50};
+
+    // Pointer to the first element of the array
+    int *ptr = arr;   // same as: int *ptr = &arr[0];
+
+    cout << "Using array indexing:\n";
+    for (int i = 0; i < 5; i++) {
+        cout << "arr[" << i << "] = " << arr[i] << endl;
+    }
+
+    cout << "\nUsing pointers:\n";
+    for (int i = 0; i < 5; i++) {
+        cout << "*(ptr + " << i << ") = " << *(ptr + i) << endl;
+    }
+
+    cout << "\nAddresses:\n";
+    for (int i = 0; i < 5; i++) {
+        cout << "Address of arr[" << i << "] = " << (ptr + i) << endl;
+    }
+
+    return 0;
+}
+
+
